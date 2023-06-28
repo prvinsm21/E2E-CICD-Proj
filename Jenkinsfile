@@ -9,11 +9,7 @@ pipeline {
                 sh 'echo Passed'
             }
         }
-        stage ('Build and Test') {
-            steps {
-                sh 'mvn test && mvn clean '
-            }
-        }stage ('Unit Testing') {
+        stage ('Unit Testing') {
             steps {
                 sh 'mvn test'
             }
