@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Built-By: macko
+Build-Jdk: 17.0.6
+Implementation-Title: WebApp
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: org.bisp.mavenproject
+Implementation-URL: http://www.example.com
+Created-By: Maven Integration for Eclipse
+
