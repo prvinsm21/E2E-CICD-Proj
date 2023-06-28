@@ -11,7 +11,21 @@ pipeline {
         }
         stage ('Build and Test') {
             steps {
-                sh 'mvn clean package'
+                sh 'mvn test && mvn clean '
+            }
+        }stage ('Unit Testing') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+        stage ('Integration Testing') {
+            steps {
+                sh 'mvn verify -DskipUnitTests'
+            }
+        }
+        stage ('Build stage') {
+            steps {
+                sh 'mvn clean install'
             }
         }
         stage ('Static Code Analysis') {
